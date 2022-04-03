@@ -1,0 +1,22 @@
+R1(config)# int g0/1
+R1(config-if)# standby 1 ip 10.204.4.254
+R1(config-if)# standby 1 priority 150
+R1(config-if)# standby 1 preempt
+
+R1(config)# int g0/2
+R1(config-if)# standby 2 ip 10.204.5.254
+R1(config-if)# standby 2 priority 150
+R1(config-if)# standby 2 preempt
+
+
+
+R2(config)# int g0/1
+R2(config-if)# standby 1 ip 10.204.4.254
+
+R2(config)# int g0/2
+R2(config-if)# standby 2 ip 10.204.5.254
+
+R1 és R2 között OSPF vagy statikus forgalomirányírás.
+Alhálózatok egybevonása. 
+PPP határforgalomirányítás
+ISP
