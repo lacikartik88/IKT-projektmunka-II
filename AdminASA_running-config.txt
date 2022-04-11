@@ -1,0 +1,91 @@
+: Saved
+:
+ASA Version 9.6(1)
+!
+hostname AdminASA
+domain-name wr
+names
+!
+interface GigabitEthernet1/1
+ nameif outside1
+ security-level 0
+ ip address 10.204.1.2 255.255.255.240
+!
+interface GigabitEthernet1/2
+ nameif inside2
+ security-level 0
+ ip address 10.204.1.17 255.255.255.240
+!
+interface GigabitEthernet1/3
+ nameif inside3
+ security-level 0
+ ip address 10.204.1.33 255.255.255.240
+!
+interface GigabitEthernet1/4
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/5
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/6
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/7
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/8
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface Management1/1
+ management-only
+ no nameif
+ no security-level
+ ip address 10.204.1.49 255.255.255.240
+!
+!
+!
+!
+!
+!
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect dns preset_dns_map
+  inspect ftp 
+  inspect tftp 
+!
+service-policy global_policy global
+!
+telnet timeout 5
+ssh timeout 5
+!
+!
+!
+!
+router ospf 4
+ log-adjacency-changes
+ network 10.204.1.0 255.255.255.240 area 0
+ network 10.204.1.16 255.255.255.240 area 0
+ network 10.204.1.32 255.255.255.240 area 0
+!
