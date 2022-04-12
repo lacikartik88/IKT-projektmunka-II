@@ -58,13 +58,13 @@ interface GigabitEthernet0/0/1
 !
 
 !
-interface Serial0/0/0
+interface Serial0/1/0
  ip address 155.15.15.2 255.255.255.248
  encapsulation ppp
  ppp authentication chap
  ip nat outside
 !
-interface Serial0/0/1
+interface Serial0/1/1
  no ip address
  clock rate 2000000
  shutdown
