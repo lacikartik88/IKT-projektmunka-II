@@ -22,7 +22,6 @@ username ISP2 password 0 CEO
 username SSH_ADMIN secret 5 $1$mERr$vTbHul1N28cEp8lkLqr0f/
 !
 !
-
 !
 !
 !
@@ -30,6 +29,9 @@ username SSH_ADMIN secret 5 $1$mERr$vTbHul1N28cEp8lkLqr0f/
 !
 !
 !
+!
+crypto key generate rsa
+ 1024
 !
 !
 ip ssh version 2
@@ -69,7 +71,6 @@ interface Serial0/1/1
  clock rate 2000000
  shutdown
 !
-
 !
 router ospf 4
  log-adjacency-changes
