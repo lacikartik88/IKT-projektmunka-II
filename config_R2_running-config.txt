@@ -21,7 +21,6 @@ no ipv6 cef
 username SSH_ADMIN secret 5 $1$mERr$vTbHul1N28cEp8lkLqr0f/
 !
 !
-license udi pid CISCO2911/K9 sn FTX1524I5V3-
 !
 !
 !
