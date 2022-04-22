@@ -37,10 +37,6 @@ username ISP2 password 0 ADMIN
 username SSH_ADMIN secret 5 $1$mERr$vTbHul1N28cEp8lkLqr0f/
 !
 !
-license udi pid CISCO2911/K9 sn FTX1524BFQ6-
-license boot module c2900 technology-package securityk9
-!
-!
 !
 crypto isakmp policy 1
  encr 3des
