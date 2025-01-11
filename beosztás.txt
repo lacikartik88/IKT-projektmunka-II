@@ -1,5 +1,0 @@
-elméleti rész: hálózattervezés, ip címzés, vezeték nélküli hálózatok beállítása, EatherChannel, NAT, Tunnel, STS-VPN
-
-Kristóf: OSPF, HSRP, ACL, PPP
-
-Bence: Szerverrek (DHCP/DNS) / Kliensek, (Python/NetMiko=IoT), SubIf=VLAN,
